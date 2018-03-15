@@ -40,8 +40,15 @@ public class LoginControllerAlpha implements LoginController {
 
 	@Override
 	public String logout(HttpServletRequest request) {
-		throw new RuntimeException("something went wrong");
+//		throw new RuntimeException("something went wrong");
 		
+		/*
+		 * If getSession.invalidate doesn't work for you
+		 */
+//		request.getSession().setAttribute("loggedCustomer", null);
+		
+		/* Destroys object on the disk */
+		request.getSession().invalidate();
+		return "login.html";
 	}
-
 }

@@ -46,6 +46,14 @@ public class CustomerControllerAlpha implements CustomerController {
 	@Override
 	public Object getAllCustomers(HttpServletRequest request) {
 		
+		/* for multiple calls to loggedCustomer */
+		Customer loggedCustomer = (Customer) request.getSession().getAttribute("loggedCustomer");
+		
+		/* If customer is not logged in */
+		if(loggedCustomer == null) {
+			return "login.html";
+		}
+		
 		/* Client is requesting the view. */
 		if (request.getParameter("fetch") == null) {
 			return "all-customers.html";

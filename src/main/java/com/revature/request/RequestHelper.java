@@ -20,7 +20,7 @@ public class RequestHelper {
 			return CustomerControllerAlpha.getInstance().getAllCustomers(request);
 		
 		default:
-			return "404.html";
+			return "not-implemented.html";
 		}
 	}
 }

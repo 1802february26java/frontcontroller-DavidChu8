@@ -27,7 +27,7 @@ public class LoginControllerAlpha implements LoginController {
 							request.getParameter("password"))
 				);
 		
-		/* If authentification failed */
+		/* If authentication failed */
 		if (loggedCustomer == null) {
 			return new ClientMessage("AUTHENTICATION FAILED");
 		}
@@ -40,8 +40,8 @@ public class LoginControllerAlpha implements LoginController {
 
 	@Override
 	public String logout(HttpServletRequest request) {
+		throw new RuntimeException("something went wrong");
 		
-		return null;
 	}
 
 }

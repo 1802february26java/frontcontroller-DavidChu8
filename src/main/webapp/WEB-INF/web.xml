@@ -20,8 +20,12 @@
   </servlet-mapping>
   
   <!-- ERROR PAGES! -->
-  
-  
+  <!-- For 500 -->
+  <error-page>
+  	<exception-type>java.lang.Throwable</exception-type>
+  	<location>/error.html</location>  	
+  	
+  </error-page>
   
   <!-- session objects will expire in 30 minutes -->
   <session-config>

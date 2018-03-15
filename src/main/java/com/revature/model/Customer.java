@@ -2,6 +2,7 @@ package com.revature.model;
 
 /* Main Customer POJO (bean) needed for example */
 public class Customer {
+	
 	private int id;
 	private String firstName;
 	private String lastName;

@@ -1,13 +1,18 @@
 
 package com.revature.service;
 import com.revature.repository.CustomerRepositoryJdbc;
+import com.revature.util.ConnectionUtil;
 
 import java.util.List;
+
+import org.apache.log4j.Logger;
 
 import com.revature.model.Customer;
 
 public class CustomerServiceAlpha implements CustomerService {
 	
+	private static Logger logger = Logger.getLogger(CustomerServiceAlpha.class);
+
 	private static CustomerServiceAlpha customerServiceAlpha;
 	
 	private CustomerServiceAlpha() {}

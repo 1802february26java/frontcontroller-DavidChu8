@@ -2,11 +2,16 @@ package com.revature.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
+
 import com.revature.ajax.ClientMessage;
 import com.revature.model.Customer;
 import com.revature.service.CustomerServiceAlpha;
+import com.revature.util.ConnectionUtil;
 
 public class CustomerControllerAlpha implements CustomerController {
+
+	private static Logger logger = Logger.getLogger(CustomerControllerAlpha.class);
 
 	/*
 	 * SINGLETON

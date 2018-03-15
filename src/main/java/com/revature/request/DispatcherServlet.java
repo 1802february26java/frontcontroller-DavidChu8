@@ -7,9 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.util.ConnectionUtil;
 
 public class DispatcherServlet extends HttpServlet {
+	private static Logger logger = Logger.getLogger(DispatcherServlet.class);
+
 	/**
 	 * 
 	 */

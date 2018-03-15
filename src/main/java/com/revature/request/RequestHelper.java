@@ -2,10 +2,16 @@ package com.revature.request;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
+
 import com.revature.controller.CustomerControllerAlpha;
 import com.revature.controller.LoginControllerAlpha;
+import com.revature.util.ConnectionUtil;
 
 public class RequestHelper {
+	
+	private static Logger logger = Logger.getLogger(RequestHelper.class);
+
 	private RequestHelper() {}
 	
 	public static Object process(HttpServletRequest request) {

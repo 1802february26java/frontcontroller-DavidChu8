@@ -22,7 +22,7 @@ public final class ConnectionUtil {
 
 	/* Get connection to JDBC */
 	public static Connection getConnection() throws SQLException {
-		String url = "jdbc:oracle:thin:@revdbinstance.ckun4yvykie0.us-east-1.rds.amazonaws.com:1521:ORCL";
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
 		String username = "LOGIN_TEST_DB";
 		String password = "p4ssw0rd";
 
